@@ -1,3 +1,4 @@
+import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
 
@@ -21,6 +22,8 @@ export default function RootLayout({
               <a href="#" className="hover:text-green-300">Speaking</a>
               <a href="#" className="hover:text-green-300 px-3">Uses</a>
             </nav>
+
+            <ThemeToggle />
           </header>
           <main>{children}</main>
         </div>
