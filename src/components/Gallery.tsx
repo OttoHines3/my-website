@@ -14,11 +14,11 @@ export default function Gallery() {
     return (
         <section className=" w-full">
             <h2 className="text-2xl font-bold mb-6 px-4">Featured Shots</h2>
-            <div className=" flex justify-evenly ">
+            <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 px-4 ">
                 {IMAGES.map((src) => (
                     <div
                         key={src}
-                        className="relative flex-none w-48 h-48 rounded-2xl overflow-hidden shadow-lg"
+                        className="relative w-full pt-[100%] rounded-2xl overflow-hidden shadow-lg"
                     >
                         <Image
                             src={src}
