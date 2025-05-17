@@ -1,28 +1,35 @@
+// components/ThemeToggle.tsx
 'use client';
 import { useEffect, useState } from 'react';
-import { Moon, Sun } from 'lucide-react'; // or your icon library
+import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+    // Lazy init from localStorage (default to dark)
+    const [isDark, setIsDark] = useState<boolean>(() => {
+        if (typeof window === 'undefined') return true;
+        return localStorage.getItem('theme') !== 'light';
+    });
 
+    // Sync <html> class & localStorage whenever isDark changes
     useEffect(() => {
-        const root = window.document.documentElement;
-        root.classList.remove(theme === 'dark' ? 'light' : 'dark');
-        root.classList.add(theme);
-        localStorage.setItem('theme', theme);
-    }, [theme]);
-
-    useEffect(() => {
-        const stored = localStorage.getItem('theme') as 'light' | 'dark' | null;
-        if (stored) setTheme(stored);
-    }, []);
+        const root = document.documentElement;
+        if (isDark) {
+            root.classList.add('dark');
+            root.classList.remove('light');
+        } else {
+            root.classList.add('light');
+            root.classList.remove('dark');
+        }
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }, [isDark]);
 
     return (
         <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setIsDark(d => !d)}
             className="p-2 rounded-full hover:bg-gray-800 transition"
+            aria-label="Toggle Theme"
         >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
         </button>
     );
 }
