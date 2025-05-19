@@ -49,7 +49,7 @@ export default function Projects() {
                     Projects I have built to sharpen my skills and explore ideas.
                 </h1>
                 <p className="text-[#8f8f99]">From full stack web apps to trading tools and micro experiments, these are some of the things
-                    I've created to solve problems, test concepts, or just have fun building. Some are polished,
+                    I&apos;ve created to solve problems, test concepts, or just have fun building. Some are polished,
                     others are still evolving - but all of them reflect my curiosity and obsession with clean,
                     purposeful development.</p>
             </div>
