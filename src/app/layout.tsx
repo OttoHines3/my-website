@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 import Link from "next/link";
 
@@ -36,16 +37,7 @@ export default function RootLayout({
     <html lang="en" >
       <body className=" dark:bg-black dark:text-white" >
         <div className="mx-auto max-w-7xl light:bg-white dark:bg-[#18181c] border border-gray-800 rounded-2xl">
-          <header className=" px-4 flex justify-center space-x-5">
-            <nav className="mt-6 space-x-6 border border-neutral-800 rounded-full text-black dark:text-gray-300 dark:bg-[#25252a] ">
-              <Link href="/" className="hover:text-green-300">Home</Link>
-              <Link href="#" className="hover:text-green-300 px-3">About</Link>
-              <Link href="/projects" className="hover:text-green-300">Projects</Link>
-              <Link href="#" className="hover:text-green-300">Trading</Link>
-
-            </nav>
-            {/* <ThemeToggle /> */}
-          </header>
+          <NavBar />
           <main>{children}</main>
         </div>
       </body >
