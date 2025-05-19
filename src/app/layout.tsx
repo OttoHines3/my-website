@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'Otto Hines – Developer & Trader',
@@ -35,6 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
+      <Analytics />
       <body className=" dark:bg-black dark:text-white" >
         <div className="mx-auto max-w-7xl light:bg-white dark:bg-[#18181c] border border-gray-800 rounded-2xl">
           <NavBar />
