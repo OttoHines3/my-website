@@ -22,10 +22,10 @@ export default function Home() {
           blend structure with intuition. Whether I’m refining an options model or designing a user experience,
           I care about clarity, performance, and results.</p>
         <div className="flex gap-4  text-gray-400 space-x-3" >
-          <a href="#" className="hover:text-white"><FaXTwitter size={20} /></a>
-          <a href="#" className="hover:text-white"><FaInstagram size={20} /></a>
-          <a href="#" className="hover:text-white"><FaGithub size={20} /></a>
-          <a href="#" className="hover:text-white"><FaLinkedin size={20} /></a>
+          {/* <a href="#" className="hover:text-white"><FaXTwitter size={20} /></a>
+          <a href="#" className="hover:text-white"><FaInstagram size={20} /></a> */}
+          <a href="http://github.com/ottohines3" className="hover:text-white"><FaGithub size={20} /></a>
+          <a href="http://www.linkedin.com/in/otto-hines-bb8951320" className="hover:text-white"><FaLinkedin size={20} /></a>
         </div>
       </div>
 
