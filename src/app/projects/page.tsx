@@ -44,7 +44,7 @@ const items = [
 export default function Projects() {
     return (
         <div>
-            <div className="flex flex-col max-w-xl m-20 space-y-7 ">
+            <div className="flex flex-col max-w-xl m-20 space-y-7 sm:text-left ">
                 <h1 className=" font-semibold text-4xl font-sans ">
                     Projects I have built to sharpen my skills and explore ideas.
                 </h1>
@@ -53,7 +53,7 @@ export default function Projects() {
                     others are still evolving - but all of them reflect my curiosity and obsession with clean,
                     purposeful development.</p>
             </div>
-            <div className="grid grid-cols-3 grid-row-2 m-20 space-y-10 space-x-10">
+            <div className="grid grid-cols-3 grid-row-2 m-20 space-y-10 space-x-10 sm:grid-cols-2 lg:grid-cols-3 ">
                 {items.map((obj, index) => (
                     <div className="flex flex-col space-y-3 hover:bg-[#232323] rounded-xl p-4 hover:shadow-lg hover:scale-[1.01] hover:-translate-y-1" key={index}>
                         <div className="w-fit p-2 rounded-full ">
@@ -62,7 +62,7 @@ export default function Projects() {
                         <h2 className="text-lg">{obj.title}</h2>
                         <p className="text-[#8f8f99]"> {obj.description} </p>
 
-                        <Link href={obj.link} className="flex flex-row space-x-5 items-center hover:text-green-300"> <Code size={15} /> <p>github.com</p></Link>
+                        <Link href={obj.link} className="flex flex-col sm:flex-row items-center justify-start gap-1 hover:text-green-300 text-sm mt-2"> <Code size={15} className="shrink-0" /> <p className="break-words">github.com</p></Link>
                     </div>
                 )
 

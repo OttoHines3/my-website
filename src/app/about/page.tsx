@@ -8,7 +8,7 @@ export default function About() {
             {/* Text Block */}
             <div>
                 <h1 className="text-4xl font-bold mb-6">
-                    I&aspos;m Otto Hines. I live in Chicago, where I build and trade with precision.
+                    I&apos;m Otto Hines. I live in Chicago, where I build and trade with precision.
                 </h1>
 
                 <p className="mb-4 text-[#8f8f99]">
