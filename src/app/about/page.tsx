@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaEnvelope } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
 import Image from 'next/image';
 import Link from 'next/link';
 

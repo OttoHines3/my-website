@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import Gallery from '@/components/Gallery'
 import WorkHistory from '@/components/WorkHistory';
 
