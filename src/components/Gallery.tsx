@@ -13,7 +13,7 @@ const IMAGES = [
 export default function Gallery() {
     return (
         <section className=" w-full">
-            <h2 className="text-2xl font-bold mb-6 px-4">Featured Shots</h2>
+            <h2 className="text-2xl font-bold mb-6 px-4">Work in Focus</h2>
             <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 px-4 ">
                 {IMAGES.map((src) => (
                     <div
