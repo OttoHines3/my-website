@@ -77,7 +77,7 @@ export default function Projects() {
 
             >
 
-                <div className="grid grid-cols-3 grid-row-2 m-20 space-y-10 space-x-10 sm:grid-cols-2 lg:grid-cols-3 ">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-8">
                     {items.map((obj, index) => (
                         <div className="flex flex-col space-y-3 hover:bg-[#232323] rounded-xl p-4 hover:shadow-lg hover:scale-[1.01] hover:-translate-y-1" key={index}>
                             <div className="w-fit p-2 rounded-full ">
