@@ -1,5 +1,7 @@
+'use client'
 import Link from "next/link";
 import { FolderKanban, Code, Brain, MonitorSmartphone, Rocket, LineChart } from 'lucide-react';
+import { motion } from 'framer-motion'
 
 
 const items = [
@@ -45,29 +47,52 @@ export default function Projects() {
     return (
         <div>
             <div className="flex flex-col max-w-xl m-20 space-y-7 sm:text-left ">
-                <h1 className=" font-semibold text-4xl font-sans ">
-                    Projects I have built to sharpen my skills and explore ideas.
-                </h1>
-                <p className="text-[#8f8f99]">From full stack web apps to trading tools and micro experiments, these are some of the things
-                    I&apos;ve created to solve problems, test concepts, or just have fun building. Some are polished,
-                    others are still evolving - but all of them reflect my curiosity and obsession with clean,
-                    purposeful development.</p>
+                <motion.div
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                >
+
+                    <h1 className=" font-semibold text-4xl font-sans ">
+                        Projects I have built to sharpen my skills and explore ideas.
+                    </h1>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+                >
+
+                    <p className="text-[#8f8f99]">From full stack web apps to trading tools and micro experiments, these are some of the things
+                        I&apos;ve created to solve problems, test concepts, or just have fun building. Some are polished,
+                        others are still evolving - but all of them reflect my curiosity and obsession with clean,
+                        purposeful development.</p>
+                </motion.div>
             </div>
-            <div className="grid grid-cols-3 grid-row-2 m-20 space-y-10 space-x-10 sm:grid-cols-2 lg:grid-cols-3 ">
-                {items.map((obj, index) => (
-                    <div className="flex flex-col space-y-3 hover:bg-[#232323] rounded-xl p-4 hover:shadow-lg hover:scale-[1.01] hover:-translate-y-1" key={index}>
-                        <div className="w-fit p-2 rounded-full ">
-                            {obj.icon}
+            {/* Fade-in effect for the grid */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+
+            >
+
+                <div className="grid grid-cols-3 grid-row-2 m-20 space-y-10 space-x-10 sm:grid-cols-2 lg:grid-cols-3 ">
+                    {items.map((obj, index) => (
+                        <div className="flex flex-col space-y-3 hover:bg-[#232323] rounded-xl p-4 hover:shadow-lg hover:scale-[1.01] hover:-translate-y-1" key={index}>
+                            <div className="w-fit p-2 rounded-full ">
+                                {obj.icon}
+                            </div>
+                            <h2 className="text-lg">{obj.title}</h2>
+                            <p className="text-[#8f8f99]"> {obj.description} </p>
+
+                            <Link href={obj.link} className="flex flex-col sm:flex-row items-center justify-start gap-1 hover:text-green-300 text-sm mt-2"> <Code size={15} className="shrink-0" /> <p className="break-words">github.com</p></Link>
                         </div>
-                        <h2 className="text-lg">{obj.title}</h2>
-                        <p className="text-[#8f8f99]"> {obj.description} </p>
+                    )
 
-                        <Link href={obj.link} className="flex flex-col sm:flex-row items-center justify-start gap-1 hover:text-green-300 text-sm mt-2"> <Code size={15} className="shrink-0" /> <p className="break-words">github.com</p></Link>
-                    </div>
-                )
-
-                )}
-            </div>
+                    )}
+                </div>
+            </motion.div>
         </div>
     )
 }
