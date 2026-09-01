@@ -60,7 +60,7 @@ export default function WorkHistory() {
             </div>
 
             <a
-                href="/Resume(5-17-25).pdf"
+                href="/Resume_Otto_Hines.pdf"
                 download
                 className="mt-15 inline-flex items-center justify-center w-full gap-2 px-4 py-2   rounded-lg hover:bg-gray-800 transition"
             >
