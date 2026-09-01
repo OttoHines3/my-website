@@ -12,10 +12,10 @@ export default function Trading() {
 
         >
 
-            <div className="min-h-screen bg-[#18181c] flex flex-col items-center justify-center px-6 text-center">
+            <div className="min-h-[70vh] flex flex-col items-center justify-center px-6 py-20 text-center">
                 <FaChartLine size={48} className="text-teal-400 mb-6" />
 
-                <h1 className="text-4xl font-bold mb-4 text-white">Trading Page Coming Soon</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Trading Page Coming Soon</h1>
 
                 <p className="text-[#8f8f99] max-w-xl mb-6">
                     I’m working on a deep dive into my trading strategies, tools, and dashboards —

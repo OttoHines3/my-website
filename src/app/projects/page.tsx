@@ -46,14 +46,14 @@ const items = [
 export default function Projects() {
     return (
         <div>
-            <div className="flex flex-col max-w-xl m-20 space-y-7 sm:text-left ">
+            <div className="flex flex-col max-w-xl m-6 sm:m-12 md:m-20 space-y-7 sm:text-left ">
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
                 >
 
-                    <h1 className=" font-semibold text-4xl font-sans ">
+                    <h1 className="font-semibold text-3xl sm:text-4xl font-sans">
                         Projects I have built to sharpen my skills and explore ideas.
                     </h1>
                 </motion.div>
@@ -77,7 +77,7 @@ export default function Projects() {
 
             >
 
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-8">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-6 sm:m-8">
                     {items.map((obj, index) => (
                         <div className="flex flex-col space-y-3 hover:bg-[#232323] rounded-xl p-4 hover:shadow-lg hover:scale-[1.01] hover:-translate-y-1" key={index}>
                             <div className="w-fit p-2 rounded-full ">
@@ -86,7 +86,7 @@ export default function Projects() {
                             <h2 className="text-lg">{obj.title}</h2>
                             <p className="text-[#8f8f99]"> {obj.description} </p>
 
-                            <Link href={obj.link} className="flex flex-col sm:flex-row items-center justify-start gap-1 hover:text-green-300 text-sm mt-2"> <Code size={15} className="shrink-0" /> <p className="break-words">github.com</p></Link>
+                            <Link href={obj.link} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center justify-start gap-1 hover:text-green-300 text-sm mt-2"> <Code size={15} className="shrink-0" /> <p className="break-words">github.com</p></Link>
                         </div>
                     )
 

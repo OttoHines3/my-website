@@ -2,17 +2,22 @@ import NavBar from "@/components/NavBar";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 
+const SITE_URL = 'https://my-website-flame-nine.vercel.app';
+
 export const metadata = {
-  title: 'Otto Hines – Developer & Trader',
-  description: 'Portfolio site for Otto Hines',
+  metadataBase: new URL(SITE_URL),
+  title: 'Otto Hines – Software Engineer',
+  description:
+    'Otto Hines is a software engineer in Chicago building full-stack web applications and trading tools with React, Next.js, and TypeScript.',
   openGraph: {
-    title: 'Otto Hines – Developer & Trader',
-    description: 'Check out my work, trading insights, and personal projects.',
-    url: 'https://my-website-flame-nine.vercel.app',
+    title: 'Otto Hines – Software Engineer',
+    description:
+      'Full-stack engineer building web applications and trading tools. Previously Microsoft and Cass & York.',
+    url: SITE_URL,
     siteName: 'Otto Hines',
     images: [
       {
-        url: 'https://my-website-flame-nine.vercel.app/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Preview of Otto Hines Portfolio',
@@ -22,10 +27,17 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Otto Hines – Developer & Trader',
-    description: 'Check out my work, trading insights, and personal projects.',
-    images: ['https://my-website-flame-nine.vercel.app.jpg/og-image.jpg'],
+    title: 'Otto Hines – Software Engineer',
+    description:
+      'Full-stack engineer building web applications and trading tools. Previously Microsoft and Cass & York.',
+    images: ['/og-image.jpg'],
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#18181c',
 };
 
 export default function RootLayout({
@@ -34,14 +46,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <Analytics />
-      <body className=" dark:bg-black dark:text-white" >
-        <div className="mx-auto max-w-7xl light:bg-white dark:bg-[#18181c] border border-gray-800 rounded-2xl">
+    <html lang="en">
+      <body className="bg-black text-white">
+        <div className="mx-auto max-w-7xl bg-[#18181c] border border-gray-800 sm:rounded-2xl">
           <NavBar />
           <main>{children}</main>
         </div>
-      </body >
-    </html >
+        <Analytics />
+      </body>
+    </html>
   );
 }

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function About() {
     return (
-        <div className="grid grid-cols-1 m-20 md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto px-4">
+        <div className="grid grid-cols-1 m-6 sm:m-12 md:m-20 md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto px-4">
             {/* Text Block */}
             <div>
                 <motion.div
@@ -16,7 +16,7 @@ export default function About() {
 
                 >
 
-                    <h1 className="text-4xl font-bold mb-6">
+                    <h1 className="text-3xl sm:text-4xl font-bold mb-6">
                         I&apos;m Otto Hines. I live in Chicago, where I build and trade with precision.
                     </h1>
                 </motion.div>
@@ -28,7 +28,7 @@ export default function About() {
                 >
 
                     <p className="mb-4 text-[#8f8f99]">
-                        I’ve always had a love for systems — whether they’re built in code or revealed in markets. I started programming in high school and later studied Computer Science at the University of Michigan, drawn to the challenge of building things that are both elegant and functional.
+                        I’ve always had a love for systems — whether they’re built in code or revealed in markets. I started programming in high school and went on to earn a Bachelor in General Studies at the University of Michigan, concentrating in Computer Science and Information — coursework spanning data structures and algorithms, software engineering, databases, and statistical modeling.
                     </p>
                     <p className="mb-4 text-[#8f8f99]">
                         My early projects were nothing flashy — just tiny automations and scrappy frontends — but they taught me how to move fast, debug deeply, and keep learning. Since then, I’ve built everything from AI-connected journaling apps to trading dashboards that process options flow, volatility shifts, and real-time structure.
@@ -53,7 +53,7 @@ export default function About() {
 
                     <Image
                         src="/aboutpage.jpeg"
-                        alt="picture"
+                        alt="Otto Hines"
                         width={380}
                         height={320}
                         className="rounded-2xl rotate-2 object-cover w-full mb-10 animate-fade-in "
@@ -65,6 +65,7 @@ export default function About() {
                         <Link
                             href="https://github.com/ottohines3"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="group flex items-center space-x-4"
                         >
                             <FaGithub className="text-[#8f8f99] group-hover:text-teal-400 transition" size={18} />
@@ -74,6 +75,7 @@ export default function About() {
                         <Link
                             href="https://www.linkedin.com/in/otto-hines-bb8951320"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="group flex items-center space-x-4"
                         >
                             <FaLinkedin className="text-[#8f8f99] group-hover:text-teal-400 transition" size={18} />
